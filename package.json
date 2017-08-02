@@ -1,0 +1,38 @@
+{
+  "name": "ps-fire",
+  "version": "1.0.0",
+  "description": "yet another DSL",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run fmt && npm run lint && webpack",
+    "lint": "tslint src/*.ts && tslint test/*.js",
+    "fmt": "tsfmt --verify src/*.ts && tsfmt --verify test/*.js",
+    "fmt-fix": "tsfmt -r src/*.ts && tsfmt -r test/*.js",
+    "test": "npm run lint && npm run fmt && karma start --single-run --browsers=ChromeHeadless",
+    "test-dev": "npm run lint && npm run fmt && karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kingwl/ps-fire.git"
+  },
+  "keywords": [
+    "dsl"
+  ],
+  "author": "kingwl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kingwl/ps-fire/issues"
+  },
+  "homepage": "https://github.com/Kingwl/ps-fire#readme",
+  "devDependencies": {
+    "jasmine-core": "^2.7.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "ts-loader": "^2.3.2",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.2",
+    "typescript-formatter": "^5.2.0",
+    "webpack": "^3.4.1"
+  }
+}
